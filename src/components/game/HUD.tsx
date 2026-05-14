@@ -363,7 +363,7 @@ export default function HUD() {
           {/* Top-center: Camera buttons + Day/Night */}
           <div className="flex flex-col items-center gap-2">
             <CameraModeButtons />
-            <DayNightButton />
+            {/* <DayNightButton /> */}
           </div>
 
           {/* Top-right: Pause button */}
@@ -386,9 +386,8 @@ export default function HUD() {
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
-              background: `radial-gradient(ellipse at center, transparent 30%, rgba(255,255,255,${
-                Math.min(0.12, (carState.speed - 150) / 1500)
-              }) 100%)`,
+              background: `radial-gradient(ellipse at center, transparent 30%, rgba(255,255,255,${Math.min(0.12, (carState.speed - 150) / 1500)
+                }) 100%)`,
               animation: 'speedPulse 0.15s ease-in-out infinite',
             }}
           />
